@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "full-regression-headed-chrome":"cypress run --headed chrome --spec 'cypress/e2e/*.feature'",
-    "full-regression-headless-chrome":"cypress run --browser chrome --spec 'cypress/e2e/*.feature'",
-    "contact-us tests-heeded-chrome":"cypress run --headed chrome --spec 'cypress/e2e/Contact_Us.feature'",
-    "login-tests-heeded-chrome":"cypress run --headed chrome --spec 'cypress/e2e/Login.feature'",
-    "contact-us headed":"cypress run -e TAGS=\"@Contact_us\" --headed"
+    "full-regression:headed-chrome": "cypress run --headed chrome --spec 'cypress/e2e/*.feature'",
+    "full-regression:headless-chrome": "cypress run --browser chrome --spec 'cypress/e2e/*.feature'",
+    "contact-us tests:heeded-chrome": "cypress run --headed chrome --spec 'cypress/e2e/Contact_Us.feature'",
+    "login-tests:headed-chrome": "cypress run --headed chrome --spec 'cypress/e2e/Login.feature'",
+    "contact-us:headed": "cypress run -e TAGS=\"@Contact_us\" --headed"
   },
   "author": "Raghvendra Pathak",
   "license": "ISC",
