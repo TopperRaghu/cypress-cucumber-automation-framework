@@ -1,0 +1,34 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress cucumber automation framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "full-regression-headed-chrome":"cypress run --headed chrome --spec 'cypress/e2e/*.feature'",
+    "full-regression-headless-chrome":"cypress run --browser chrome --spec 'cypress/e2e/*.feature'",
+    "contact-us tests-heeded-chrome":"cypress run --headed chrome --spec 'cypress/e2e/Contact_Us.feature'",
+    "login-tests-heeded-chrome":"cypress run --headed chrome --spec 'cypress/e2e/Login.feature'",
+    "contact-us headed":"cypress run -e TAGS=\"@Contact_us\" --headed"
+  },
+  "author": "Raghvendra Pathak",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "cypress": "^13.17.0",
+    "ts-loader": "^9.5.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/**/*.js",
+    "html":{
+       "enabled":true,
+       "output":"cypress/reports/cucumber-html/cucumber-report.html"
+    },
+
+    "messages":{
+      "enabled":true,
+       "output":"cypress/reports/cucumber-ndjson/cucumber-report.ndjson"
+    }
+  }
+}
